@@ -1,6 +1,6 @@
 export class User {
-  private firstname: string = '';
-  private lastname: string = '';
+  private firstname: string = "";
+  private lastname: string = "";
   private age: number = 0;
 
   public static BIRTH_YEAR: number = 2000;
@@ -18,6 +18,6 @@ export class User {
     return this.age;
   }
   public getFullName(): string {
-    return this.firstname + " " + this.lastname + " is stopping...";
+    return `${this.firstname} ${this.lastname}`.trim();
   }
 }
