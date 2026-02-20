@@ -1,9 +1,10 @@
 export class User {
-  private firstname: string = '';
-  private lastname: string = '';
+  private firstname: string = "";
+  private lastname: string = "";
   private age: number = 0;
 
-  public static BIRTH_YEAR: number = new Date().getFullYear();
+  public static readonly BIRTH_YEAR: number = 2000;
+
   public setFirstname(firstname: string): void {
     this.firstname = firstname;
   }
@@ -17,6 +18,6 @@ export class User {
     return this.age;
   }
   public getFullName(): string {
-    return this.firstname + ' ' + this.lastname;
+    return this.firstname + " " + this.lastname;
   }
 }
