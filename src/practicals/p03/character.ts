@@ -1,25 +1,18 @@
 export class Character {
-    protected name: string;
-  protected health: number = 100;
+  protected name: string;
+  protected health: number;
 
-  constructor(name: string, health?: number){
+  constructor(name: string, health: number = 100) {
     this.name = name;
-    if (health !== undefined){
-      this.health = health;
-    }
+    this.health = health;
   }
-  public getName(): string{
+  public getName(): string {
     return this.name;
   }
-  public getHealth(): number{
+  public getHealth(): number {
     return this.health;
   }
-  public receiveDamage(damage: number): void{
-    const currentHealth = this.health
-    this.health = currentHealth - damage
-
-    if (this.health < 0){
-      this.health = 0;
-    }
+  public receiveDamage(damage: number): void {
+    this.health -= damage;
   }
 }
