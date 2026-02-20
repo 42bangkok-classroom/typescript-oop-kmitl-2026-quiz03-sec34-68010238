@@ -11,7 +11,7 @@ export class Warrior extends Character {
     return this.weapon;
   }
   public receiveDamage(damage: number): void {
-    const reducedDamage = damage - (damage * 0.9);
+    const reducedDamage = damage - (damage * 10 / 100);
     super.receiveDamage(reducedDamage);
   }
 }
