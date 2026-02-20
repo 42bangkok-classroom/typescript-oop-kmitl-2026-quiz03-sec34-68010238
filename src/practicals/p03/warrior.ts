@@ -2,17 +2,17 @@ import { Character } from "./character";
 
 export class Warrior extends Character {
   // TODO: implement class properties, constructor with super(...), and methods
-  private weapon: string;
+  weapon: string = "";
 
-  constructor(name: string, weapon: string, health: number) {
+  constructor(name: string, weapon: string, health: number = 100) {
     super(name, health);
     this.weapon = weapon;
   }
-  public getWeapon(): string {
+  getWeapon(): string {
     return this.weapon;
   }
-  public receiveDamage(damage: number): void {
-    const reducedDamage = damage * 0.9;
-    this.health -= reducedDamage;
+  receiveDamage(damage: number) {
+    const now = this.health;
+    this.health = now - (damage - damage * 0.1);
   }
 }
