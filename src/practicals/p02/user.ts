@@ -3,7 +3,7 @@ export class User {
   private lastname: string = '';
   private age: number = 0;
 
-  public static BIRTHYEAR: number = new Date().getFullYear();
+  public static BIRTH_YEAR: number = new Date().getFullYear();
   public setFirstname(firstname: string): void {
     this.firstname = firstname;
   }
