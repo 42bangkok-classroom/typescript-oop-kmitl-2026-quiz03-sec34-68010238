@@ -14,10 +14,10 @@ export class User {
   public setAge(age: number): void {
     this.age = age;
   }
-  public getAge(): number {
+  getAge(): number {
     return this.age;
   }
-  public getFullName(): string {
+  getFullName(): string {
     return `${this.firstname} ${this.lastname}`.trim();
   }
 }
