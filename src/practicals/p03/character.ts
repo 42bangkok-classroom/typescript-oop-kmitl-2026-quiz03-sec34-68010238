@@ -15,7 +15,8 @@ export class Character {
     return this.health;
   }
   public receiveDamage(damage: number): void{
-    this.health -= damage;
+    const currentHealth = this.health
+    this.health = currentHealth - damage
 
     if (this.health < 0){
       this.health = 0;
